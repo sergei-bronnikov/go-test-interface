@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option go_package = "github.com/codio/chipmunk-interface/vnc";
+
+package com.codio.chipmunk.proto.vnc;
+
+service Vnc {
+    rpc GetStatus(GetStatusRequest) returns (GetStatusResponse);
+    rpc CreateVncPassword(CreateVncPasswordRequest) returns (CreateVncPasswordResponse);
+    rpc RestartVncService(RestartVncServiceRequest) returns (RestartVncServiceResponse);
+}
+
+message GetStatusRequest {}
+
+message GetStatusResponse {
+    enum Status {
+        UNKOWN = 0;
+        RUNNING = 1;
+    }
+    Status status = 1;
+}
+
+message CreateVncPasswordRequest {}
+
+message CreateVncPasswordResponse {
+    string password = 1;
+}
+
+message RestartVncServiceRequest {}
+
+message RestartVncServiceResponse {}
