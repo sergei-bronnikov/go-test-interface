@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-option go_package = "github.com/codio/chipmunk-interface/vnc";
+option go_package = "github.com/sergei-bronnikov/go-test-interface";
 
-package com.codio.chipmunk.proto.vnc;
+package com.sergeibronnikov.chipmunk.proto.vnc;
 
 service Vnc {
     rpc GetStatus(GetStatusRequest) returns (GetStatusResponse);
