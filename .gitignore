@@ -1,7 +1,0 @@
-# Gradle
-.gradle
-build/
-/generated-sources/
-
-*.iml
-proto/nodeout
